@@ -1,0 +1,254 @@
+/*CSS Reset*/
+
+*{
+margin: 0;
+padding: 0;
+}
+html{
+/* smooth scrolling */
+/* html mein agr scrolling hu rhi hai toh we want ki woh smooth scrolling hu  */
+scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+    font-family: 'Lobster Two', cursive;
+}
+
+/* Navigation Bar */
+#navbar{
+display: flex;
+align-items: center;
+/* position: absolute;/* absolute krne se yeh apne parent ke upar chla jaega */
+/* position: relative; position relative krne se yha gap bn jaega nhi toh before mein jo bgcolor hai woh dusrewale before ke img ke niche lgayi hai uske niche color aa jaega.. position relative lgakr check kro*/
+position: sticky; /*isko krne se stick toh hu jaega bt before mein jo bgcolor lga hai woh show hone lkgega navbar ke upr isiliye opacity 0.1 kr di hai */
+top: 0px; /*stick krne ke lie */
+}
+
+
+#navbar::before{
+    content: "";
+    background-color: rgb(26, 22, 16);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+ top: 0px;
+ left: 0px;   
+    }
+
+/*Navigation Bar: Logo and image  */
+#logo{
+   margin: 0px 21px;
+   
+
+}
+
+#logo img{
+    margin: 8px 1px;
+    height: 63px;
+
+}
+
+/*Navigation Bar: List styling */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+
+list-style: none;
+font-size: 1.3rem;
+
+}
+#navbar ul li a{
+display: block;
+padding: 3px 22px;
+border-radius: 20px;
+text-decoration: none;/* underline jo aati hai woh chle jaegi*/
+color: beige;
+transition: all 0.3s linear;
+}
+#navbar ul li a:hover{
+background-color: white;
+color: brown;
+    
+}
+
+/* Home Section  */
+#home{
+
+display: flex;
+flex-direction: column; /*display flex hone se sb ek line mein aa gya tha isiliye flex direction hmne column kiya taaki sb waapis niche aa jaaye*/
+padding: 0px 200px;
+justify-content: center;
+align-items: center;
+height: 500px;
+}
+
+/* for bg everytime we are using pseudo selectors */
+#home::before{
+    content: "";
+    background: url('../img/bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 86%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+ top: 0px;
+ left: 0px;   
+}
+#home h1{
+
+    color: white;
+    text-align: center;
+}
+#home p{
+
+    font-size: 1.2rem;
+    padding: 2px;
+    color: white;
+    text-align: center;
+}
+/* Services section  */
+#services{
+margin: 34px;
+    display: flex;
+}
+#services .box{
+
+border: 2px solid brown;
+padding: 26px;
+margin: 3px 6px;
+border-radius: 28px;
+background-color: antiquewhite;
+margin-bottom: 20px; /*targeted margin ko target krne ke lie margin top margin bottom margin left margin right use kro same goes for padding */
+}
+#services .box img{
+height: 120px;
+margin: auto;
+display: block;
+}
+/* Clients section  */
+#client-section{
+height: 374px;
+    
+}
+#client-section::before{
+content: '';
+position: absolute;
+background: url(../img/bg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 56%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#clients{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.client-item{
+padding: 30px;
+
+}
+#clients img{
+    height: 124px;
+        
+    }
+/* contact section  */
+#contact{
+
+    position: relative;
+}
+#contact::before{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+z-index: -1;
+opacity: 0.7;
+background: url(../img/contactus.jpg) no-repeat center center/cover;
+
+}
+#contactbox{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 13px;
+}
+#contactbox input,
+#contactbox textarea{
+width: 100%;
+padding: 0.5rem;
+border-radius: 10px;
+font-size: 1rem;
+}
+#contactbox form{
+width: 40%;
+}
+#contactbox label{
+
+    font-size: 1.3rem;
+}
+
+footer{
+
+background: black;
+color: white;
+padding: 6px 20px;
+
+}
+ /*utility class */
+.hprimary{/*  mtlb ab jo  bbi aage heading aaegi usme yeh class add krke usko iski propewrties applky kr skte hu same goes for paragarph tag you can make a utility class for paragraph tag and also for more tag*/
+
+font-size: 2.8rem;
+padding: 12px;
+}
+.hsecondary{
+font-size: 1.8rem;
+padding: 12px;
+
+
+}
+
+.btn{ /*is also a utility  class*/
+padding: 2px 14px;
+color:  rgb(16, 197, 55);
+font-weight: bold;
+font-size: 1rem;
+border: 2px solid white;
+background-color: antiquewhite;
+border-radius: 20px;
+font-family: 'Lobster Two', cursive;
+margin: 12px;
+cursor: pointer;
+}
+
+.center{
+text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
