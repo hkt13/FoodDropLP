@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>FoodDropLandingPage</h1>
+  <h1>FoodDropLP</h1>
 </div>
 <h2>About the project</h2>
 <p>Welcome to our <b>Food Delivery Landing Page!</b> We take pride in offering a diverse range of exceptional services, providing the ultimate culinary experience for our valued customers. With a focus on quality, convenience, and customer satisfaction, we are the go-to destination for all your food needs.</p>
